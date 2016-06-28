@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Todo, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "Has a field email" do
+    todo = Todo.create(title: "Buy Milk")
+    expect(todo.email).to be nil
+  end
 end
