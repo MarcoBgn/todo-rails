@@ -4,8 +4,8 @@
       <ul class='todos'>
         <% @todos.each do |todo| %>
         <li class="<%= 'completed' if todo.completed? %>"> <%= todo.title %>
-             <%= check_box(todo, :Completed, {id: "Check_todo"}) %>
-             <%= button_to "Mark Completed", todo_completion_path(todo) %>
+             <%= check_box(todo, :Completed, {id: "Check_todo"}, "true", "false") %>
         </li>
+        <%= button_to "Mark Completed", todo_completion_path(todo) %>
         <% end %>
       </ul>
